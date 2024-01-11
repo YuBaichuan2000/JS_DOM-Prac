@@ -46,3 +46,17 @@ function createTable(){
         table.appendChild(newRow);
     }
 }
+
+function removecolor(){
+    const color = document.querySelector('#colorSelect');
+    color.children[color.selectedIndex].remove();
+}
+
+function getOptions(){
+    const color = document.querySelector('#mySelect');
+    let message = `We have ${color.children.length} options`;
+    Array.from(color).forEach(option=>{
+        message = message + option.innerText;
+    })
+    window.alert(message);
+}
